@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+<h1 class="current-category"> <%= params[:category] %> </h1>
+
+<div class="row">
+  <div class="col-md-2">
+  <%= link_to 'New Permit', new_permit_path %> |
+
+
+
+<%= link_to 'New Permit Details', new_permitdetail_path %> 
+  </div>
+
+  <div class="col-md-10">
+    <% if @permits.count == 0%>
+  <p> There are no permits in this category. </p>
+<%else %> 
+
+
+
+
+      
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Permits</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+    <% @permits.each do |permit| %>
+
+      <tr>
+        <td>
+          
+<%= link_to permit.permitid, permit_path(permit) %>
+
+        </td>
+        
+      </tr>
+
+  <% end %>
+
+    </tbody>
+  </table>
+
+
+
+
+<% end %>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Questiontype:</strong>
+  <%= @questiontype.questiontype_id %>
+</p>
+
+<p>
+  <strong>Questiontype name:</strong>
+  <%= @questiontype.questiontype_name %>
+</p>
+
+<%= link_to 'Edit', edit_questiontype_path(@questiontype) %> |
+<%= link_to 'Back', questiontypes_path %>

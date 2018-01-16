@@ -1,0 +1,17 @@
+<%= simple_form_for(@commonquestion) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+   <%= select_tag(:question_id, options_for_select(@questions), :prompt => "Select a question") %>
+   <%= select_tag(:parttype_id, options_for_select(@parttypes), :prompt => "Select a part") %>
+    <%= select_tag(:questiontype_id, options_for_select(@questiontypes), :prompt => "Select a type") %>
+    <%= f.input :commonquestion_id %>
+    <%= f.input :question_text %>
+    <%= f.input :options %>
+    <%= f.input :answer_option_number %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

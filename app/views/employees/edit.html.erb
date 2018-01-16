@@ -1,0 +1,30 @@
+<h1>Editing Employee</h1>
+
+<!--%= render 'form', employee: @employee %-->
+
+<%= simple_form_for(@employee) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.select :site_id, @sites  %>
+    <%= f.input :employee_id %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email_address %>
+    <%= f.input :mobile_number %>
+    <%= f.input :user_name %>
+    <%= f.input :password %>
+    <%= f.input :manager_id %>
+
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Show', @employee %> |
+<%= link_to 'Back', employees_path %>

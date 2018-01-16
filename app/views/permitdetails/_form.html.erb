@@ -1,0 +1,18 @@
+<%= simple_form_for(@permitdetail) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+<%= select_tag(:permit_id, options_for_select(@permits), :prompt => "Select a permit") %>
+<%= select_tag(:question_id, options_for_select(@questions), :prompt => "Select a question") %>
+<%= select_tag(:commonquestion_id, options_for_select(@commonquestions), :prompt => "Select a common question") %>
+
+    <%= f.input :permitdetail_id %>
+    <%= f.input :strreply %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

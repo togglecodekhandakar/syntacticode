@@ -1,0 +1,2 @@
+class Commonquestion < ApplicationRecord
+end

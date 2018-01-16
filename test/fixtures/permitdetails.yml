@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  permitdetail_id: MyString
+  strreply: MyString
+  question_text: MyString
+  commonquestion_text: MyString
+
+two:
+  permitdetail_id: MyString
+  strreply: MyString
+  question_text: MyString
+  commonquestion_text: MyString

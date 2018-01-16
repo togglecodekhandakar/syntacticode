@@ -1,0 +1,2 @@
+module PermitDetailsHelper
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  permitid: MyString
+  permit: MyString
+  filename: MyString
+
+two:
+  permitid: MyString
+  permit: MyString
+  filename: MyString

@@ -1,0 +1,24 @@
+<%= simple_form_for(@employee) do |f| %>
+  <%= f.error_notification %>
+
+
+
+  <div class="form-inputs">
+    <%= select_tag(:site_id, options_for_select(@sites), :prompt => "Select a site") %>
+    <%= f.input :employee_id %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email_address %>
+    <%= f.input :mobile_number %>
+    <%= f.input :user_name %>
+    <%= f.input :password %>
+    <%= f.input :manager_id %>
+
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

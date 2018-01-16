@@ -1,0 +1,26 @@
+<h1>Editing Commonquestion</h1>
+
+<%= simple_form_for(@commonquestion) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+   
+
+<%= f.select :question_id, @questions  %>
+<%= f.select :parttype_id, @parttypes  %>
+  <%= f.select :questiontype_id, @questiontypes  %> 
+
+    <%= f.input :commonquestion_id %>
+    <%= f.input :question_text %>
+    <%= f.input :options %>
+    <%= f.input :answer_option_number %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Show', @commonquestion %> |
+<%= link_to 'Back', commonquestions_path %>

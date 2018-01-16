@@ -1,0 +1,12 @@
+<%= simple_form_for(@questiontype) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :questiontype_id %>
+    <%= f.input :questiontype_name %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

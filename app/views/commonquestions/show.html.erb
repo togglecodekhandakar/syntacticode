@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Commonquestion:</strong>
+  <%= @commonquestion.commonquestion_id %>
+</p>
+
+<p>
+  <strong>Question text:</strong>
+  <%= @commonquestion.question_text %>
+</p>
+
+<p>
+  <strong>Options:</strong>
+  <%= @commonquestion.options %>
+</p>
+
+<p>
+  <strong>Answer option number:</strong>
+  <%= @commonquestion.answer_option_number %>
+</p>
+
+<%= link_to 'Edit', edit_commonquestion_path(@commonquestion) %> |
+<%= link_to 'Back', commonquestions_path %>

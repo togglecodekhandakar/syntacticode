@@ -1,0 +1,24 @@
+<h1>Editing Permit</h1>
+
+<%= simple_form_for(@permit) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+  
+   <%= f.select :category_id, @categories  %>
+ <%= f.select :employee_id, @employees  %> 
+ <%= f.select :site_id, @sites  %>
+
+    <%= f.input :permitid %>
+    <%= f.input :permit %>
+    <%= f.input :filename %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Show', @permit %> |
+<%= link_to 'Back', permits_path %>

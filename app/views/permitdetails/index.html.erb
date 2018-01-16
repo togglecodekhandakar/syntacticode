@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Permitdetails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Permitdetail</th>
+      <th>Strreply</th>
+      <th>Question text</th>
+      <th>Commonquestion text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @permitdetails.each do |permitdetail| %>
+      <tr>
+        <td><%= permitdetail.permitdetail_id %></td>
+        <td><%= permitdetail.strreply %></td>
+        <td><%= permitdetail.question_text %></td>
+        <td><%= permitdetail.commonquestion_text %></td>
+        <td><%= link_to 'Show', permitdetail %></td>
+        <td><%= link_to 'Edit', edit_permitdetail_path(permitdetail) %></td>
+        <!--td><%= link_to 'Destroy', permitdetail, method: :delete, data: { confirm: 'Are you sure?' } %></td-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Permitdetail', new_permitdetail_path %>

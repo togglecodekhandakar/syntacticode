@@ -1,0 +1,17 @@
+<%= simple_form_for(@permit) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
+<%= select_tag(:employee_id, options_for_select(@employees), :prompt => "Select an employee id") %>
+<%= select_tag(:site_id, options_for_select(@sites), :prompt => "Select a site") %>
+
+    <%= f.input :permitid %>
+    <%= f.input :permit %>
+    <%= f.input :filename %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
